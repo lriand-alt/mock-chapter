@@ -1,5 +1,7 @@
 'use client';
 
+import Popup from "./Popup";
+
 const chapters = [
   { number: 1, title: 'Skagen før og nu' },
   { number: 2, title: 'Om en skagensmaler' },
@@ -43,11 +45,14 @@ export default function ChapterNav() {
       })}
 
       {/* AI chat button */}
-      <button disabled aria-label="AI-chat" className={[btnBase, '!bg-yellow-50'].join(' ')}>
+      <button disabled aria-label="AI-chat" className={btnBase}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
           <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" />
         </svg>
       </button>
+      <span className="relative pt-3">
+        <Popup />
+      </span>
     </nav>
   );
 }
