@@ -25,7 +25,7 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} antialiased flex min-h-screen`}>
         {/* Left sidebar */}
-        <aside className="w-60 flex-shrink-0 bg-[#f0f0f0] flex flex-col min-h-screen">
+        <aside className="w-60 shrink-0 bg-[#f0f0f0] flex flex-col min-h-screen">
           {/* Portal title */}
           <div className="px-4 py-5 border-b border-[#d8d8d8]">
             <h1 className="text-base font-bold text-gray-900 leading-tight">Skagensmalere</h1>

@@ -106,7 +106,7 @@ export default async function Chapter2Page() {
               className="px-4 py-3 flex items-center gap-3"
               style={{ backgroundColor: '#5f0000' }}
             >
-              <span className="w-7 h-7 rounded-full bg-white text-[#5f0000] text-sm font-black flex items-center justify-center flex-shrink-0">
+              <span className="w-7 h-7 rounded-full bg-white text-[#5f0000] text-sm font-black flex items-center justify-center shrink-0">
                 {idx + 1}
               </span>
               <h4 className="font-semibold text-white text-sm">{activity.title}</h4>
@@ -114,7 +114,7 @@ export default async function Chapter2Page() {
             <ol className="px-5 py-4 space-y-2 bg-white">
               {activity.steps.map((step, stepIdx) => (
                 <li key={stepIdx} className="flex gap-3 text-gray-700 text-sm">
-                  <span className="flex-shrink-0 font-semibold text-[#5f0000]">{stepIdx + 1}.</span>
+                  <span className="shrink-0 font-semibold text-[#5f0000]">{stepIdx + 1}.</span>
                   <span className="leading-relaxed">{step}</span>
                 </li>
               ))}
