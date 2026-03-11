@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import ChatWidget from "./ChatWidget";
+// import ChatWidget from "./ChatWidget";
 import Popup from "./Popup";
 import Image from "next/image";
 
@@ -60,7 +60,7 @@ export default function ChapterNav() {
       </button>
       <span className="relative pt-3">
         <Popup />
-        <ChatWidget size="medium" open={isOpen} />
+        {/* <ChatWidget size="medium" open={isOpen} /> */}
       </span>
     </nav>
   );
