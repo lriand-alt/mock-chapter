@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="da">
+      <head> 
+        <script type="module" src="https://claude-bot-sigma.vercel.app/teacher-tool-widget.js"></script>
+      </head>
       <body className={`${geistSans.variable} antialiased flex min-h-screen`}>
         {/* Left sidebar */}
         <aside className="w-60 flex-shrink-0 bg-[#f0f0f0] flex flex-col min-h-screen">

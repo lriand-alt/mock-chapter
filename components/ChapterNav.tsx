@@ -1,5 +1,10 @@
 'use client';
 
+import { useState } from "react";
+import ChatWidget from "./ChatWidget";
+import Popup from "./Popup";
+import Image from "next/image";
+
 const chapters = [
   { number: 1, title: 'Skagen før og nu' },
   { number: 2, title: 'Om en skagensmaler' },
@@ -13,6 +18,13 @@ const ACTIVE_CHAPTER = 2;
 const btnBase = 'w-12 h-12 hover:bg-[#e0e0e0] flex items-center justify-center text-xl cursor-default select-none rounded-full shadow-md shadow-gray-300 bg-white text-gray-700';
 
 export default function ChapterNav() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenChat = () => {
+    console.log('Chat widget toggled', isOpen);
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="flex flex-col gap-1.5 p-3 flex-1">
       {/* Home button */}
@@ -43,11 +55,13 @@ export default function ChapterNav() {
       })}
 
       {/* AI chat button */}
-      <button disabled aria-label="AI-chat" className={[btnBase, '!bg-yellow-50'].join(' ')}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-          <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" />
-        </svg>
+      <button aria-label="AI-chat" className={[btnBase, 'cursor-pointer'].join(' ')} onClick={handleOpenChat}>
+        <Image src="/sparkles-pink.png" alt="AI icon" width={20} height={20} />
       </button>
+      <span className="relative pt-3">
+        <Popup />
+        <ChatWidget size="medium" open={isOpen} />
+      </span>
     </nav>
   );
 }
