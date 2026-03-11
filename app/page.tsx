@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { getChapter2Content } from '@/lib/getPdfContent';
+import GenerateQuestionsButton from '@/components/GenerateQuestionsButton';
 
 export default async function Chapter2Page() {
   const content = await getChapter2Content();
@@ -11,7 +12,10 @@ export default async function Chapter2Page() {
         <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-1">
           Kapitel 2 · Ca. 4 lektioner
         </p>
-        <h2 className="text-4xl font-black text-gray-900 mb-3">Om en skagensmaler</h2>
+        <div className="flex items-start justify-between gap-4 mb-3">
+          <h2 className="text-4xl font-black text-gray-900">Om en skagensmaler</h2>
+          <GenerateQuestionsButton />
+        </div>
         <p className="text-gray-700 leading-relaxed">
           I dette kapitel skal du gå i dybden med en skagensmaler. Du kan vælge at fordybe dig
           mere i en af de kunstnere, du bliver præsenteret for. Du kan også vælge at lære om en

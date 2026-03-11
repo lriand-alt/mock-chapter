@@ -8,7 +8,7 @@ export default function Popup() {
       {/* Speech bubble triangle – fill layer */}
       <div className="absolute -top-[12px] left-5 w-0 h-0 border-l-10 border-l-transparent border-r-10 border-r-transparent border-b-[12px] border-b-teal-800" />
       Du er nu inde på et test forløb og vi håber, du vil bære over med, at alt ikke ser ud, som det plejer. 
-      Det, du skal teste er vores idé til en ny AI-funktion til lærere. Klik på knappen ovenover for at åbne AI-chatten. Tak for at være med!
+      Det, du skal teste er vores idé til en ny spørgsmål generator til lærere. Klik på knappen ved siden af titlen for at generere spørgsmål. Tak for at være med!
     </div>
   );
 }
