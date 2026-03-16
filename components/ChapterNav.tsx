@@ -20,11 +20,6 @@ const btnBase = 'w-12 h-12 hover:bg-[#e0e0e0] flex items-center justify-center t
 export default function ChapterNav() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleOpenChat = () => {
-    console.log('Chat widget toggled', isOpen);
-    setIsOpen(!isOpen);
-  };
-
   return (
     <nav className="flex flex-col gap-1.5 p-3 flex-1">
       {/* Home button */}
@@ -55,7 +50,7 @@ export default function ChapterNav() {
       })}
 
       {/* AI chat button */}
-      <button aria-label="AI-chat" className={[btnBase, 'cursor-pointer'].join(' ')} onClick={handleOpenChat}>
+      <button aria-label="AI-chat" className={[btnBase, 'cursor-pointer'].join(' ')} onClick={() => setIsOpen(!isOpen)}>
         <Image src="/sparkles-pink.png" alt="AI icon" width={20} height={20} />
       </button>
       <span className="relative pt-3">
