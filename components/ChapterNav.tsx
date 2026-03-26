@@ -9,9 +9,9 @@ import Image from "next/image";
 const chapters = [
   { number: 1, title: 'Skagen før og nu' },
   { number: 2, title: 'Om en skagensmaler' },
-  { number: 3, title: 'Skærmoptagelse' },
-  { number: 4, title: 'En blå sommeraften' },
-  { number: 5, title: 'Skagensmalerne' },
+  // { number: 3, title: 'Skærmoptagelse' },
+  // { number: 4, title: 'En blå sommeraften' },
+  // { number: 5, title: 'Skagensmalerne' },
 ];
 
 const ACTIVE_CHAPTER = 2;
