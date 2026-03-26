@@ -4,6 +4,7 @@ import { useState } from "react";
 import ChatWidget from "./ChatWidget";
 import Popup from "./Popup";
 import Image from "next/image";
+// import { useGTM } from "@/hooks/useGTM";
 
 const chapters = [
   { number: 1, title: 'Skagen før og nu' },
@@ -19,6 +20,13 @@ const btnBase = 'w-12 h-12 hover:bg-[#e0e0e0] flex items-center justify-center t
 
 export default function ChapterNav() {
   const [isOpen, setIsOpen] = useState(false);
+  // const { trackClick } = useGTM();
+
+  const handleAIButtonClick = () => {
+    setIsOpen(!isOpen);
+
+    // trackClick('ai_chat_button', 'mock_chapter_nav');
+  }
 
   return (
     <nav className="flex flex-col gap-1.5 p-3 flex-1">
@@ -50,7 +58,7 @@ export default function ChapterNav() {
       })}
 
       {/* AI chat button */}
-      <button aria-label="AI-chat" className={[btnBase, 'cursor-pointer'].join(' ')} onClick={() => setIsOpen(!isOpen)}>
+      <button aria-label="AI-chat" className={[btnBase, 'cursor-pointer'].join(' ')} onClick={handleAIButtonClick}>
         <Image src="/sparkles-pink.png" alt="AI icon" width={20} height={20} />
       </button>
       <span className="relative pt-3">
